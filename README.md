@@ -1,58 +1,54 @@
-  # Storybook Addon Status
+# Storybook Addon Status
 
-  Storybook Status Addon show the component status in your story.
+Storybook Status Addon show the component status in your story.
 
-  [Live preview](https://mverissimo.github.io/storybook-addon-status/)
+[Live preview](https://mverissimo.github.io/storybook-addon-status/)
 
-  # Installation
+# Installation
 
-  ```bash
-  yarn add --dev @mverissimoo/storybook-addon-status
-  ```
+```bash
+yarn add --dev @mverissimoo/storybook-addon-status
+```
 
-  # Configuration
+# Configuration
 
-  Add storybook-addon-status to your list of addons:
+Add storybook-addon-status to your list of addons:
 
-  ```js
-  .storybook/main.js
-  ```
+```js
+// .storybook/main.js
 
-  ```js
-  module.exports = {
-    addons: ['@mverissimoo/storybook-addon-status/register'],
-  };
-  ```
+module.exports = {
+  addons: ['@mverissimoo/storybook-addon-status/preset'],
+};
+```
 
-  # Usage
+# Usage
 
-  Just add the following param in your storie:
+Just add the following param in your storie:
 
-  ```jsx
-  export default {
-    title: 'Components/Button',
-    parameters: {
-      status: 'stable', // beta| deprecated | review | stable
+```jsx
+export default {
+  title: 'Components/Button',
+  parameters: {
+    status: 'stable', // beta| deprecated | review | stable
+  },
+};
+```
+
+# Custom status badge
+
+Just add a `status` object in your `parameters` eg:
+
+```js
+// .storybbok/preview.js
+
+export const parameters = {
+  badges: {
+    custom: {
+      title: 'some badge',
+      color: '#FFFFFF',
+      background: '#000000',
     },
-  };
-  ```
-
-  # Custom status badge
-
-  Just add a `status` object in your `parameters` eg:
-
-  ```js
-  .storybbok/preview.js
-  ```
-
-  ```js
-  export const parameters = {
-    badges: {
-      custom: {
-        title: 'some badge',
-        color: '#FFFFFF',
-        background: '#000000',
-      },
-    },
-  };
-  ```
+  },
+};
+```
