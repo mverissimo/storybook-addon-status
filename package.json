@@ -1,6 +1,6 @@
 {
   "name": "@mverissimoo/storybook-addon-status",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Show the component status",
   "keywords": [
     "storybook-addons",
