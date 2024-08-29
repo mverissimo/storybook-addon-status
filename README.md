@@ -1,6 +1,6 @@
 # Storybook Addon Status
 
-Storybook Status Addon show the component status in your story.
+Storybook Status Addon shows the component status in your story.
 
 [Live preview](https://mverissimo.github.io/storybook-addon-status/)
 
@@ -24,7 +24,7 @@ module.exports = {
 
 # Usage
 
-Just add the following param in your storie:
+Just add the following parameter in your story:
 
 ```jsx
 export default {
@@ -40,7 +40,7 @@ export default {
 Just add a `status` object in your `parameters` eg:
 
 ```js
-// .storybbok/preview.js
+// .storybook/preview.js
 
 export const parameters = {
   badges: {
